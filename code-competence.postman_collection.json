@@ -1,0 +1,716 @@
+{
+	"info": {
+		"_postman_id": "39c29cd3-1982-46c2-8d5c-ba146df57c9e",
+		"name": "code-competence",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"joko\",\r\n    \"email\":\"joko@gmail.com\",\r\n    \"password\":\"joko123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/register",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"joko\",\r\n    \"email\":\"joko@gmail.com\",\r\n    \"password\":\"joko123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/register",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 May 2023 14:32:33 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "44"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"success register\",\n    \"status\": 200\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"joko@gmail.com\",\r\n    \"password\":\"joko123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"joko@gmail.com\",\r\n    \"password\":\"joko123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 May 2023 14:32:51 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "302"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"3d8945bd-28a0-4bad-a8e9-d49291723599\",\n    \"message\": \"success register\",\n    \"status\": 200,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impva29AZ21haWwuY29tIiwiaWQiOiIzZDg5NDViZC0yOGEwLTRiYWQtYThlOS1kNDkyOTE3MjM1OTkiLCJwYXNzd29yZCI6Impva28xMjMifQ.SmMKqa4bTJ7Qi9Bi7UAjMLkq_rE-hq5GMe3tiRwFCEI\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add item",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impva29AZ21haWwuY29tIiwiaWQiOiI4MzEwMWQ2MC03ZjJhLTRlMTMtOWZlZS02YzE1ODJjZjdkYWIiLCJwYXNzd29yZCI6Impva28xMjMifQ.QeYhVcDlmXpbbJ96Wkm6v59dhKBecfdfaeYCYZ1C7yw",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Aries\",\r\n    \"description\":\"for childern only\",\r\n    \"stock\":10,\r\n    \"price\":1000,\r\n    \"category_id\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"items"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add item",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impva29AZ21haWwuY29tIiwiaWQiOiI4MzEwMWQ2MC03ZjJhLTRlMTMtOWZlZS02YzE1ODJjZjdkYWIiLCJwYXNzd29yZCI6Impva28xMjMifQ.QeYhVcDlmXpbbJ96Wkm6v59dhKBecfdfaeYCYZ1C7yw",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Aries\",\r\n    \"description\":\"for childern only\",\r\n    \"stock\":10,\r\n    \"price\":1000,\r\n    \"category_id\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/items",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"items"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 May 2023 14:33:39 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "44"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"success add item\",\n    \"status\": 200\n}"
+				}
+			]
+		},
+		{
+			"name": "Get items",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impva29AZ21haWwuY29tIiwiaWQiOiI4MzEwMWQ2MC03ZjJhLTRlMTMtOWZlZS02YzE1ODJjZjdkYWIiLCJwYXNzd29yZCI6Impva28xMjMifQ.QeYhVcDlmXpbbJ96Wkm6v59dhKBecfdfaeYCYZ1C7yw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/items?keywords=ies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"items"
+					],
+					"query": [
+						{
+							"key": "keywords",
+							"value": "ies"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get items",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impva29AZ21haWwuY29tIiwiaWQiOiI4MzEwMWQ2MC03ZjJhLTRlMTMtOWZlZS02YzE1ODJjZjdkYWIiLCJwYXNzd29yZCI6Impva28xMjMifQ.QeYhVcDlmXpbbJ96Wkm6v59dhKBecfdfaeYCYZ1C7yw",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9000/items?keywords=ies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"items"
+							],
+							"query": [
+								{
+									"key": "keywords",
+									"value": "ies"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 May 2023 14:34:43 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "189"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": \"ab7e193e-0600-4264-95c0-89740a0ff68a\",\n            \"name\": \"Aries\",\n            \"description\": \"for childern only\",\n            \"stock\": 10,\n            \"price\": 1000,\n            \"category_id\": 2\n        }\n    ],\n    \"message\": \"success get items\",\n    \"status\": 200\n}"
+				}
+			]
+		},
+		{
+			"name": "Get item by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impva29AZ21haWwuY29tIiwiaWQiOiI4MzEwMWQ2MC03ZjJhLTRlMTMtOWZlZS02YzE1ODJjZjdkYWIiLCJwYXNzd29yZCI6Impva28xMjMifQ.QeYhVcDlmXpbbJ96Wkm6v59dhKBecfdfaeYCYZ1C7yw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/items/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"items",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "ab7e193e-0600-4264-95c0-89740a0ff68a"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get item by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impva29AZ21haWwuY29tIiwiaWQiOiI4MzEwMWQ2MC03ZjJhLTRlMTMtOWZlZS02YzE1ODJjZjdkYWIiLCJwYXNzd29yZCI6Impva28xMjMifQ.QeYhVcDlmXpbbJ96Wkm6v59dhKBecfdfaeYCYZ1C7yw",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9000/items/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"items",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "ab7e193e-0600-4264-95c0-89740a0ff68a"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 May 2023 14:35:07 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "194"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": \"723eb199-7cb8-432f-a8b4-315f61db7dd9\",\n        \"name\": \"Coca cola\",\n        \"description\": \"freshenr drink\",\n        \"stock\": 10,\n        \"price\": 10000,\n        \"category_id\": 1\n    },\n    \"message\": \"success get item by id\",\n    \"status\": 200\n}"
+				}
+			]
+		},
+		{
+			"name": "Update item",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impva29AZ21haWwuY29tIiwiaWQiOiI4MzEwMWQ2MC03ZjJhLTRlMTMtOWZlZS02YzE1ODJjZjdkYWIiLCJwYXNzd29yZCI6Impva28xMjMifQ.QeYhVcDlmXpbbJ96Wkm6v59dhKBecfdfaeYCYZ1C7yw",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Aries Chiki\",\r\n    \"description\":\"this is childern snack\",\r\n    \"stock\":100,\r\n    \"price\":1000,\r\n    \"category_id\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/items/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"items",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "ab7e193e-0600-4264-95c0-89740a0ff68a"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update item",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impva29AZ21haWwuY29tIiwiaWQiOiI4MzEwMWQ2MC03ZjJhLTRlMTMtOWZlZS02YzE1ODJjZjdkYWIiLCJwYXNzd29yZCI6Impva28xMjMifQ.QeYhVcDlmXpbbJ96Wkm6v59dhKBecfdfaeYCYZ1C7yw",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Aries Chiki\",\r\n    \"description\":\"this is childern snack\",\r\n    \"stock\":100,\r\n    \"price\":1000,\r\n    \"category_id\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/items/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"items",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "ab7e193e-0600-4264-95c0-89740a0ff68a"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 May 2023 14:35:41 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "47"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"success update item\",\n    \"status\": 200\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete item",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impva29AZ21haWwuY29tIiwiaWQiOiI4MzEwMWQ2MC03ZjJhLTRlMTMtOWZlZS02YzE1ODJjZjdkYWIiLCJwYXNzd29yZCI6Impva28xMjMifQ.QeYhVcDlmXpbbJ96Wkm6v59dhKBecfdfaeYCYZ1C7yw",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Aries Chiki\",\r\n    \"description\":\"this is childern snack\",\r\n    \"stock\":10,\r\n    \"price\":1000,\r\n    \"category_id\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/items/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"items",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "ab7e193e-0600-4264-95c0-89740a0ff68a"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete item",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impva29AZ21haWwuY29tIiwiaWQiOiI4MzEwMWQ2MC03ZjJhLTRlMTMtOWZlZS02YzE1ODJjZjdkYWIiLCJwYXNzd29yZCI6Impva28xMjMifQ.QeYhVcDlmXpbbJ96Wkm6v59dhKBecfdfaeYCYZ1C7yw",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Aries Chiki\",\r\n    \"description\":\"this is childern snack\",\r\n    \"stock\":10,\r\n    \"price\":1000,\r\n    \"category_id\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/items/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"items",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "ab7e193e-0600-4264-95c0-89740a0ff68a"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 May 2023 14:36:00 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "47"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"success delete item\",\n    \"status\": 200\n}"
+				}
+			]
+		},
+		{
+			"name": "Get items by category",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impva29AZ21haWwuY29tIiwiaWQiOiI4MzEwMWQ2MC03ZjJhLTRlMTMtOWZlZS02YzE1ODJjZjdkYWIiLCJwYXNzd29yZCI6Impva28xMjMifQ.QeYhVcDlmXpbbJ96Wkm6v59dhKBecfdfaeYCYZ1C7yw",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Aries Chiki\",\r\n    \"description\":\"this is childern snack\",\r\n    \"stock\":10,\r\n    \"price\":1000,\r\n    \"category_id\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/items/category/:category_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"items",
+						"category",
+						":category_id"
+					],
+					"variable": [
+						{
+							"key": "category_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get items by category",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impva29AZ21haWwuY29tIiwiaWQiOiI4MzEwMWQ2MC03ZjJhLTRlMTMtOWZlZS02YzE1ODJjZjdkYWIiLCJwYXNzd29yZCI6Impva28xMjMifQ.QeYhVcDlmXpbbJ96Wkm6v59dhKBecfdfaeYCYZ1C7yw",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Aries Chiki\",\r\n    \"description\":\"this is childern snack\",\r\n    \"stock\":10,\r\n    \"price\":1000,\r\n    \"category_id\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/items/category/:category_id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"items",
+								"category",
+								":category_id"
+							],
+							"variable": [
+								{
+									"key": "category_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 May 2023 14:36:15 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "196"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": \"723eb199-7cb8-432f-a8b4-315f61db7dd9\",\n            \"name\": \"Coca cola\",\n            \"description\": \"freshenr drink\",\n            \"stock\": 10,\n            \"price\": 10000,\n            \"category_id\": 1\n        }\n    ],\n    \"message\": \"success get item by id\",\n    \"status\": 200\n}"
+				}
+			]
+		}
+	]
+}
