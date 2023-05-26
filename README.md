@@ -3,6 +3,11 @@ by Widho Faisal Hakim
 
 ### Documentation and Screenshot of Application :
 
+- Logging middleware
+  <br>
+  <img src="assets/logger.png" alt="Deskripsi Gambar" width="auto" height="400px">
+  <br>
+
 - Strukture code (MVC)
   <br>
   <img src="assets/vscode.png" alt="Deskripsi Gambar" width="auto" height="400px">
