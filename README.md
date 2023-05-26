@@ -1,6 +1,8 @@
 # Remidial Code Competence
 by Widho Faisal Hakim
 
+### Documentation and Screenshot of Application :
+
 - Strukture code (MVC)
   <br>
   <img src="assets/vscode.png" alt="Deskripsi Gambar" width="auto" height="400px">
